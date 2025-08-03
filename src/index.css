@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Code:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* start of the taiwlind css */
+
+/* desktop and mobile view i kept one class so it should more easy to use at any location */
+.desktop {
+	@apply lg:block md:block sm:hidden hidden
+}
+
+.mobile {
+	@apply lg:hidden md:hidden sm:block
+}
+
+.whf {
+	@apply w-full h-full
+}
+
+.navBar {
+	@apply dark:bg-[#080D19] bg-white py-4 lg:px-7 md:px-7 px-4 shadow-md z-10 border-black dark:shadow-md dark:shadow-blue-900/80 w-full fixed top-0 left-0
+}
+
+.portFolio {
+	@apply font-normal md:text-3xl lg:text-3xl leading-6 text-gray-800 dark:text-white font-kaushan text-2xl
+}
+
+.toggleSwitch {
+	@apply p-2 bg-transparent border border-gray-300 dark:border-[#f4f4f5] rounded-full hover:border-blue-500 dark:hover:border-blue-500
+}
+
+.dropdownButton {
+	@apply p-2 inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white dark:bg-[#080B0D] text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50
+}
+
+.dropdownOption {
+	@apply px-4 py-2 text-sm
+}
+
+/* home page css */
+.home {
+	@apply w-screen lg:h-screen h-full bg-sky-50/90 lg:px-10 md:px-10 lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:pt-24 dark:bg-[#060d1e] pt-20 
+}
+
+.homeDiv1 {
+	@apply flex justify-center lg:w-1/2 lg:pr-10 lg:pl-0 lg:pt-0 md:w-1/2 md:pr-10 md:pt-0 md:pl-0 sm:px-16 sm:pt-12 pt-16 px-4
+}
+
+@media screen and (min-width: 450px) and (max-width:639px) {
+	.homeDiv1{
+		padding: 20px 30px 0px 30px;
+	}
+}
+
+.homeDiv2 {
+	@apply lg:w-1/2 md:w-1/2 lg:m-0 md:m-0 lg:flex lg:flex-col lg:items-center grid justify-center
+}
+
+.title {
+	@apply flex font-kaushan lg:text-5xl md:text-4xl text-3xl font-bold dark:text-white text-gray-800
+}
+
+.skillsType {
+	@apply mt-6 lg:text-2xl text-lg font-bold text-gray-800 dark:text-white font-fira
+}
+
+.shortIntro {
+	@apply lg:text-lg text-sm mt-1 text-gray-800 dark:text-white font-fira
+}
+
+.myJourneyButton {
+	@apply text-sm lg:text-lg md:text-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center transition duration-300 transform hover:scale-105 active:scale-95
+}
+
+.codeSection {
+	@apply pt-20 w-full lg:pl-32 md:pt-0 lg:pt-0 px-4
+}
+
+.codingBlock {
+	@apply relative bg-gray-100 dark:bg-[#1e1e2e] text-gray-900 dark:text-white rounded-lg p-4 shadow-lg dark:shadow-[#0057ff4d_0px_0px_10px] w-full max-w-[460px] border border-gray-300 dark:border-gray-700 before:absolute before:bottom-[-18px] xl:before:left-3/4 lg:before:left-1/2 before:left-1/2 before:-translate-x-1/2 before:border-[20px] before:border-solid before:border-t-gray-100 dark:before:border-t-[#1e1e2e] before:border-x-transparent before:border-b-0
+}
+
+.codingBlockTitle {
+	@apply flex items-center space-x-2 pb-2 border-b border-gray-300 dark:border-gray-600
+}
+
+.codingBlockBody {
+	@apply lg:text-sm md:text-sm text-xs font-mono mt-2
+}
+
+.codingComment {
+	@apply text-gray-600 dark:text-green-400
+}
+
+.boySection {
+	@apply w-full lg:flex md:flex md:justify-end lg:justify-end md:content-end lg:content-end mt-4 flex justify-center
+}
+
+.boyCoding {
+	@apply w-[380px] lg:ml-auto md:ml-auto lg:m-0 lg:p-0
+}
+
+/* for mobile view i want the contact me section at the end */
+.contactUs {
+	@apply flex justify-center py-10 lg:hidden md:hidden
+}
+
+.skillsDiv {
+	@apply w-full h-full pt-20 bg-sky-50/90 lg:px-10 md:px-10 px-5 dark:bg-[#060d1e] overflow-y-hidden relative
+}
+
+.development {
+	@apply text-3xl text-gray-800 dark:text-white justify-center flex flex-col md:flex-row gap-8 py-10
+}
+
+.developmentReverse {
+	@apply flex flex-col md:flex-row-reverse gap-8 text-3xl text-gray-800 dark:text-white py-10
+}
+
+.developmentText {
+	@apply text-base text-justify
+}
+
+.skillImg {
+	@apply grid grid-cols-3 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-4;
+}
+
+.skillRow {
+	@apply flex justify-center gap-8
+}
+
+.skillCard {
+	@apply flex flex-col items-center w-[90px] sm:w-[110px] md:w-[110px] bg-gradient-to-tr from-[#F1FAFF] via-[#E3F2FD] to-[#D6E6FF] dark:from-[#121128] dark:via-[#1D1A38] dark:to-[#180747] border border-[#4A90E2] dark:border-indigo-500 rounded-lg p-4 hover:scale-110 hover:shadow-lg dark:hover:shadow-[0px_0px_12px_#6366F1] transition delay-150 duration-300 ease-in-out;
+}
+
+.skillCardText {
+	@apply mt-4 flex justify-center text-xs sm:text-lg md:text-lg text-gray-900 dark:text-white text-nowrap
+}
+
+.skillDivBorder {
+	@apply border-blue-400/60 dark:border-blue-800/60
+}
+
+.journeyCard {
+	@apply w-64 p-4 bg-white dark:bg-gray-800 text-sm dark:text-white text-black rounded-lg shadow-lg text-wrap cursor-pointer
+}
+
+/* tooltip code */
+.tTContainer{
+	@apply relative p-2 bg-white dark:bg-gray-900 backdrop-blur-md rounded-2xl border border-gray-300 dark:border-white/10 shadow-lg dark:shadow-[0_0_30px_rgba(79,70,229,0.15)];
+}
+
+.ttTitleArea{
+	@apply flex items-center gap-3;
+}
+
+.tTLogo{
+	@apply flex items-center justify-center w-9 h-9 rounded-full bg-indigo-100 dark:bg-indigo-500/20 text-sm;
+}
+
+.tTTitle{
+	@apply text-sm font-semibold text-gray-800 dark:text-white;
+}
+
+.tTMore {
+	@apply text-blue-500 dark:text-blue-600 ml-1 text-lg;
+}
+
+.tTText{
+	@apply text-sm text-gray-600 dark:text-gray-300;
+}
+
+.tTBg{
+	@apply absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-200/30 dark:from-indigo-500/10 to-purple-200/30 dark:to-purple-500/10 blur-xl opacity-50;
+}
+
+.tTArrow {
+	@apply absolute w-3 h-3 bg-white dark:bg-gray-900 border-r border-b border-gray-300 dark:border-white/10;
+}
+
+.textColor{
+	@apply text-gray-800 dark:text-[#E3F6FF];
+}
+
+.bg-glass {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.resume{
+	@apply w-[90%] lg:w-[60%] lg:mt-8 flex flex-col gap-4 items-center border border-white shadow-[rgba(0,0,0,0.25)_0px_0.0625em_0.0625em,_rgba(0,0,0,0.25)_0px_0.125em_0.5em,_rgba(255,255,255,0.1)_0px_0px_0px_1px_inset] dark:shadow-[rgba(0,153,255,0.15)_0px_0.0625em_0.0625em,_rgba(0,153,255,0.25)_0px_0.125em_0.5em,_rgba(255,255,255,0.05)_0px_0px_0px_1px_inset]
+}
+
+.journeyTip{
+	@apply fixed bottom-6 left-6 z-50 max-w-sm bg-white/90 dark:bg-[#0D1328] border border-gray-200 dark:border-white/20 shadow-md rounded-lg px-5 py-4 text-sm text-gray-800 dark:text-gray-100 backdrop-blur-sm dark:shadow-[0_0_30px_rgba(79,70,229,0.15)];
+}
+
+.scrolldown {
+	--color: white;
+	--sizeX: 30px;
+	--sizeY: 50px;
+	position: relative;
+	width: var(--sizeX);
+	height: var(--sizeY);
+	margin-left: var(sizeX / 2);
+	border: calc(var(--sizeX) / 10) solid var(--color);
+	border-radius: 50px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+
+.scrolldown::before {
+	content: "";
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 6px;
+	height: 6px;
+	margin-left: -3px;
+	background-color: var(--color);
+	border-radius: 100%;
+	animation: scrolldown-anim 2s infinite;
+	box-sizing: border-box;
+	box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+	0% {
+		opacity: 0;
+		height: 6px;
+	}
+
+	40% {
+		opacity: 1;
+		height: 10px;
+	}
+
+	80% {
+		transform: translate(0, 20px);
+		height: 10px;
+		opacity: 0;
+	}
+
+	100% {
+		height: 3px;
+		opacity: 0;
+	}
+}
+
+.chevrons {
+	padding: 6px 0 0 0;
+	margin-left: -3px;
+	margin-top: 48px;
+	width: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.chevrondown {
+	margin-top: -6px;
+	position: relative;
+	border: solid var(--color);
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+	animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+	animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.5;
+	}
+}
+
+/* not found page */
+.not-found{
+	@apply min-h-screen flex items-center justify-center bg-sky-50/90 dark:bg-[#060d1e] px-4
+}
+
+.four-zero-four{
+	@apply text-7xl font-extrabold text-blue-600 dark:text-blue-400
+}
+
+.page-not-found{
+	@apply text-2xl md:text-3xl font-semibold mt-4 text-gray-800 dark:text-gray-100
+}
+
+.page-not-found-content{
+	@apply mt-2 text-gray-600 dark:text-gray-400
+}
+
+.blue-button{
+	@apply inline-block mt-6 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition shadow
+}
